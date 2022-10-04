@@ -5,10 +5,10 @@
              Title="Previsão do Tempo">
 
     <StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#545454">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="RoyalBlue">
             <StackLayout Padding="10, 10, 10, 10" HorizontalOptions="Start">
                 <Label Text="Procurar Cidade" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
-                <Label x:Name="cidadeLabel" Text="Digite o nome da Cidade" TextColor="Yellow" FontSize="Small" />
+                <Label x:Name="cidadeLabel" Text="Digite o nome da Cidade" TextColor="BlanchedAlmond" FontSize="Small" />
                 <Entry x:Name="cidadeEntry" />
             </StackLayout>
             <StackLayout Padding="0, 0, 0, 10" VerticalOptions="End">
@@ -19,25 +19,25 @@
         <StackLayout Padding="10, 10, 10, 10" HorizontalOptions="Start">
             <Image x:Name="imgTempo" />
 
-            <Label Text="Local" />
+            <Label Text="Local" TextColor="Red"/>
             <Label Text="{Binding Title}" TextColor="Black" />
 
-            <Label Text="Temperatura" />
+            <Label Text="Temperatura" TextColor="Red"/>
             <Label Text="{Binding Temperature}" TextColor="Black" />
 
-            <Label Text="Velocidade do Vento" />
+            <Label Text="Velocidade do Vento" TextColor="Red" />
             <Label Text="{Binding Wind}" TextColor="Black" />
 
-            <Label Text="Umidade" />
+            <Label Text="Umidade" TextColor="Red"/>
             <Label Text="{Binding Humidity}" TextColor="Black" />
 
-            <Label Text="Visibilidade" />
+            <Label Text="Visibilidade" TextColor="Red"/>
             <Label Text="{Binding Visibility}" TextColor="Black" />
 
-            <Label Text="Nascer do Sol" />
+            <Label Text="Nascer do Sol" TextColor="Red" />
             <Label Text="{Binding Sunrise}" TextColor="Black" />
 
-            <Label Text="Pôr do Sol" />
+            <Label Text="Pôr do Sol" TextColor="Red"/>
             <Label Text="{Binding Sunset}" TextColor="Black" />
         </StackLayout>
     </StackLayout>

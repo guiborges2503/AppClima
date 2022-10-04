@@ -13,10 +13,10 @@ namespace AppClima.Services
     {
         public static async Task<Tempo> GetPrevisaoDoTempo(string cidade)
         {
-            string ApiKey = "e433a4de85ee61708dd1cbb86fb8413e";
-            string ApiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric&appid=" + ApiKey;
+            string appID = "55f011949b3194425bb0e583f08be4fa";
+            string queryString = "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric&appid=" + appID;
 
-            dynamic resultado = await getDataFromService(ApiUrl).ConfigureAwait(false);
+            dynamic resultado = await getDataFromService(queryString).ConfigureAwait(false);
 
             if (resultado["weather"] != null)
             {
@@ -59,12 +59,12 @@ namespace AppClima.Services
 
         public static async Task<dynamic> getDataFromServiceByCity(string city)
         {
-            string ApiKey = "e433a4de85ee61708dd1cbb86fb8413e";
+            string appID = "55f011949b3194425bb0e583f08be4fa";
 
-            string url = string.Format("http://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), ApiKey);
+            string queryString = string.Format("https://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), appID);
             
             HttpClient client = new HttpClient();
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync(queryString);
 
             dynamic data = null;
 
